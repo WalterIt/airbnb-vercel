@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { url } from "../App";
 import AccountNav from "../components/accountNav/AccountNav";
+import Image from "../components/form/Image";
 import BookingDates from "../components/pages/BookingDates";
 
 export default function Bookings() {
@@ -32,9 +33,9 @@ export default function Bookings() {
             >
               {booking.place.photos.length > 0 && (
                 <div className="w-48">
-                  <img
+                  <Image
                     className="object-cover"
-                    src={url + booking.place.photos[0]}
+                    src={booking.place.photos[0]}
                     alt=""
                   />
                 </div>
